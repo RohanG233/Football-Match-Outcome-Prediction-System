@@ -1,6 +1,6 @@
 import pandas as pd
 from database.db import engine
-from feature_engineering.feature_builder import FeatureBuilder
+from feature_engineering.match_features import FeatureBuilder
 
 
 def run_feature_engineering():

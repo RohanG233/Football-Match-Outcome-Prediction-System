@@ -1,13 +1,11 @@
-import pandas as pd
-from src.database.db import engine
+from src.api.feature_builder import FeatureBuilder
 
-table_name = "clean_matches"
+builder = FeatureBuilder()
 
-df = pd.read_sql(
-    f"SELECT * FROM match_features LIMIT 1",
-    engine
+result = builder.build(
+    "France",
+    "England",
+    "Final"
 )
 
-print("Columns:")
-for col in df.columns:
-    print(col)
+print(result)
