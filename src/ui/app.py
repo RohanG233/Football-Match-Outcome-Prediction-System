@@ -4,7 +4,7 @@ import os
 
 API_URL = os.getenv(
     "API_URL",
-    "http://127.0.0.1:8000"
+    "https://football-match-outcome-prediction-system.onrender.com"
 )
 
 st.set_page_config(

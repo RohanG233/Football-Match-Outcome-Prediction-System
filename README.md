@@ -86,8 +86,8 @@ Streamlit UI
 ### Deployment
 
 - GitHub
-- Render (planned)
-- Streamlit Cloud (planned)
+- Render
+- Streamlit Cloud
 
 ---
 
@@ -184,7 +184,7 @@ uvicorn src.api.app:app --reload
 
 Run Streamlit:
 
-streamlit run streamlit_app.py
+streamlit run app.py
 
 ---
 
