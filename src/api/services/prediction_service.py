@@ -5,6 +5,11 @@ from pathlib import Path
 
 from src.api.feature_builder import FeatureBuilder
 from src.common.model_features import MODEL_FEATURES
+from src.api.logger import logger
+
+from src.database.prediction_repository import (
+    prediction_repository
+)
 
 
 class PredictionService:
@@ -64,11 +69,18 @@ class PredictionService:
         # Generate probabilities
         probs = self.model.predict_proba(X)[0]
 
-        return {
+        logger.info(
+            f"Prediction request: "
+            f"{home_team} vs {away_team}"
+        )
+
+        result = {
 
             "home_team": home_team,
 
             "away_team": away_team,
+
+            "stage": stage,
 
             "home_win_probability": round(
                 float(probs[0] * 100),
@@ -85,6 +97,12 @@ class PredictionService:
                 2
             )
         }
+
+        prediction_repository.save_prediction(
+            result
+        )
+
+        return result
 
 
 prediction_service = PredictionService()
