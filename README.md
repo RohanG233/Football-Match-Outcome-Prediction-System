@@ -6,6 +6,8 @@ Football Match Outcome Prediction System is an end-to-end machine learning proje
 
 The project follows a production-style ML workflow including data ingestion, validation, cleaning, feature engineering, model training, evaluation, prediction serving through FastAPI, and a Streamlit user interface.
 
+App Demo : https://football-match-outcome-prediction-system-f9bnntbwjdmxpufw8g3w5.streamlit.app/
+
 ---
 
 ## Problem Statement
@@ -232,6 +234,7 @@ Through this project, I gained experience in:
 - Advanced football analytics features
 
 ---
+
 
 ## Author
 
